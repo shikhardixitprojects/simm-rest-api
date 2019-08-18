@@ -6,7 +6,7 @@ async function connect() {
         let jwtClient = new google.auth.JWT(
             process.env.client_email,
             null,
-            process.env.private_key,
+            process.env.private_key.replace(/\\n/g, '\n'),
             ['https://www.googleapis.com/auth/spreadsheets',
                 'https://www.googleapis.com/auth/drive']);
         jwtClient.authorize((err) => {
@@ -24,7 +24,7 @@ async function connect() {
         let jwtClient = new google.auth.JWT(
             parsedContent.client_email,
             null,
-            parsedContent.private_key,
+            parsedContent.private_key.replace(/\\n/g, '\n'),
             ['https://www.googleapis.com/auth/spreadsheets',
                 'https://www.googleapis.com/auth/drive']);
         jwtClient.authorize((err) => {
