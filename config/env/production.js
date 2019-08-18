@@ -221,7 +221,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cookie: {
-      // secure: true,
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000,  // 24 hours
     },
 
@@ -251,6 +251,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     onlyAllowOrigins: [
+      'https://simm-charts-rest.herokuapp.com/',
       'https://enigmatic-wildwood-36923.herokuapp.com/',
       'https://example.com',
       'https://staging.example.com',
