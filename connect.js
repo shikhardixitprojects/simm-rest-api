@@ -1,13 +1,8 @@
 const fs = require('mz/fs');
 const { google } = require('googleapis');
-const aws = require('aws-sdk');
 
 async function connect() {
-    if (NODE_ENV === 'production') {
-        let s3 = new aws.S3({
-            prodClientEmail: process.env.client_email,
-            prodPrivateKey: process.env.private_key
-        });
+    if (process.env.NODE_ENV === 'production') {
         let jwtClient = new google.auth.JWT(
             process.env.client_email,
             null,
