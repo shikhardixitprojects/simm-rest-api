@@ -10,7 +10,7 @@
     "@sailshq/socket.io-redis": "^5.2.0",
     "google-sheets-node-api": "^0.3.0",
     "googleapis": "^40.0.0",
-    "grunt": "^1.0.4",
+    "grunt": "^1.5.3",
     "mz": "^2.7.0",
     "nodemon": "^1.19.1",
     "sails": "^1.1.0",
